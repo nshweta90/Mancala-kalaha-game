@@ -4,7 +4,11 @@ Mancala-Kalaha game:
 Web Based  game to Play traditional Mancala/Kalaha .
 The backend uses spring boot framework to expose the REST APIs for the game.
 More details of the API can be explored with Swagger Url of application
- 
+To start playing game  
+   load the game from  http://localhost:8080/  or the hosted url http://<host>:<port>
+   Enter user names and start the game.
+   You will be indicated with player who is next to play.  
+
 Technologies used : 
 -
   Backend :  Spring boot 3,
@@ -20,29 +24,32 @@ Game View :
 Landing Page-
 
 ![image](info/landing-page-1.jpg)
-![image](https://github.com/nshweta90/Mancala-kalaha-game/assets/128600182/c82dbd47-0c4a-4afd-b522-6193a599ae46)
 -
-![image](https://github.com/nshweta90/Mancala-kalaha-game/assets/128600182/e965b756-7dd6-4672-93c9-41dceb3740f5)
+![image](info/landing-page-2.jpg)
 -
+
+ 
 Game Board-
 
-![image](https://github.com/nshweta90/Mancala-kalaha-game/assets/128600182/28405b9c-5a9e-498a-a171-14687a1ac24a)
+![image](info/GameView.jpg)
 - 
+![image](info/GameView1.jpg)
+-
 
 Design Details :
 -
 Game Data model design 
 
-![image](https://github.com/nshweta90/Mancala-kalaha-game/assets/128600182/3ca50da5-d60d-419a-876c-c44aff96e12b)
+![image](info/DataModel.jpg)
 -  
 Game Business logic Services design -  
 
-![image](https://github.com/nshweta90/Mancala-kalaha-game/assets/128600182/72011ae0-a66c-4b0a-80b7-91daf0a7fcc4)
+![image](info/BusinessLogicModel.jpg)
 - 
 
 Entity Relation Design-
 
-![image](https://github.com/nshweta90/Mancala-kalaha-game/assets/128600182/2dfd50dd-37d5-421a-abcc-555a43bcf337)
+![image](info/EntityRelation.jpg)
 -
 
 Future enhancement scope:
