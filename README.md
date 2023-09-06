@@ -15,12 +15,15 @@ Game Instructions:
 
 Technologies used : 
 -
-  Backend :  Spring boot 3,
-             Java version 17,
-             Db h2 database
-
-  Supporting tools : Swagger -Open API documentation ,             
-                      Mapstruct for Dto Entity Mapping   
+  Backend : \
+             -Spring boot 3,\
+             -Java version 17,\
+             -Db h2 database
+ 
+ Supporting tools :\
+  -Swagger -Open API documentation            
+  -Mapstruct for Dto Entity Mapping  
+ 
   Frontend: HTML,CSS,JavaScript (vanilla)
 
 Game View :
