@@ -3,11 +3,15 @@ Mancala-Kalaha game:
 
 Web Based  game to Play traditional Mancala/Kalaha .
 The backend uses spring boot framework to expose the REST APIs for the game.
-More details of the API can be explored with Swagger Url of application
-To start playing game  
-   load the game from  http://localhost:8080/  or the hosted url http://<host>:<port>
-   Enter user names and start the game.
-   You will be indicated with player who is next to play.  
+More details of the API can be explored with [Swagger](http://localhost:8080/swagger-ui/index.html) Url of application. 
+
+
+Game Instructions:
+-
+   -load the game from  http://localhost:8080/  or the hosted url http://\<host\>:\<port\> \
+   -Enter user names and start the game. \
+   -You will be indicated with player who is next to play. 
+    
 
 Technologies used : 
 -
