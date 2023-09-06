@@ -19,7 +19,7 @@ Game View :
 -
 Landing Page-
 
-![image](/info/landing-page-1-jpg)
+![image](info/landing-page-1.jpg)
 ![image](https://github.com/nshweta90/Mancala-kalaha-game/assets/128600182/c82dbd47-0c4a-4afd-b522-6193a599ae46)
 -
 ![image](https://github.com/nshweta90/Mancala-kalaha-game/assets/128600182/e965b756-7dd6-4672-93c9-41dceb3740f5)
