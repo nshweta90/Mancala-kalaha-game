@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mancala Board Game</title>
+    <style>
+html, body
+{
+  margin:5px;
+}
+
+.board
+{
+  display:flex;
+  background-color:SaddleBrown;
+  height:200px;
+  width:800px;
+  border-radius:50px;
+  padding:30px;
+}
+
+.section
+{
+  background-color:rgba(255, 255, 255, 0.03);
+  margin:5px;
+}
+
+.endsection
+{
+  display:flex;
+  flex-grow:1;
+}
+
+.midsection
+{
+  display:flex;
+  flex-direction:column;
+  flex-grow:6;
+}
+
+.midrow
+{
+  display:flex;
+  flex-grow:1;
+}
+
+.pit
+{
+  position:relative;
+  background-color:rgba(255, 255, 255, 0.08);
+  flex-grow:1;
+  margin:5px;
+  border-radius:50px;
+}
+
+.bead
+{
+  position:absolute;
+	border-radius: 50%;
+	width: 25px;
+	height: 25px;
+}
+    </style>
+</head>
+<body>
+    <div class="board">
+        <div class="section endsection">
+            <div class="pit" id="mb"></div> 
+        </div>
+        <div class="section midsection">
+          <div class="midrow topmid">
+            <div class="pot" id="pt1"></div>
+            <div class="pot" id="pt2"></div>
+            <div class="pot" id="pt3"></div>
+            <div class="pot" id="pt4"></div>
+            <div class="pot" id="pt5"></div>
+            <div class="pot" id="pt6"></div>
+          </div>
+          <div class="midrow botmid">
+            <div class="pot" id="pb6"></div>
+            <div class="pot" id="pb5"></div>
+            <div class="pot" id="pb4"></div>
+            <div class="pot" id="pb3"></div>
+            <div class="pot" id="pb2"></div>
+            <div class="pot" id="pb1"></div>
+          </div>
+        </div>
+        <div class="section endsection">
+            <div class="pot" id="mt"></div>        
+        </div>
+      </div>
+</body>
+</html>

@@ -1,0 +1,39 @@
+.container
+{ 
+    text-align: center;
+    margin: auto;
+    width: 50%;    
+    padding: 10px;
+}
+
+
+.buttonelement{
+    font-size: 16px;
+    padding: 10px 10px; 
+    border-radius: 6px;
+    margin:3px;
+}
+
+.formelement{
+    padding: 10px 10px;
+}
+
+.textelement{
+    
+    font-weight: bold; 
+    padding: 10px 10px;
+    font-size: 16px;
+    border-radius: 6px;
+    margin:3px;
+    }
+     
+    .new-game{
+    background-color: #86BE03;
+    
+    }
+    
+    .load-game{
+    background-color: #0389be;
+    
+    }
+      

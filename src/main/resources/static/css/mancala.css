@@ -1,0 +1,67 @@
+
+html, body
+{
+  margin:5px;
+}
+
+h1 {
+    color: #333;
+}
+.gameContainer
+{
+    
+    text-align: center;
+    margin: auto;
+    width: 50%;    
+    padding: 10px;
+}
+.gameBoard
+{
+  display:flex;
+  background-color: rgb(119 181 215);
+  height:200px;
+  width:800px;
+  border-radius:50px;
+  padding:30px;
+  position: relative;
+  width: auto; 
+}
+
+.midboard
+{
+  display:flex;
+  flex-grow:1;
+  line-height: 60px;
+} 
+.section
+{
+  
+  margin:5px;
+}
+
+.sidesection
+{
+  display:flex;
+  flex-grow:1;
+  line-height: 200px;
+}
+
+.midsection
+{
+  display:flex;
+  flex-direction:column;
+  flex-grow:6;
+}
+
+.pit
+{
+  position: relative;
+  background-color: beige;
+  flex-grow:1;
+  margin:5px;
+  border-radius:10px;
+  text-align: center;
+  line-height: inherit;
+}
+
+
