@@ -10,9 +10,8 @@ import com.game.mancala.model.Player;
 public interface PlayerDataMapper {
 	
 	@Mapping(target = "game", ignore = true)
-	PlayerDataEntity mapBoToEntity(Player bo);
-	
+	PlayerDataEntity mapBoToEntity(Player bo); 
 	 
 	Player mapEntityToBO(PlayerDataEntity entity);
-
+ 
 }
