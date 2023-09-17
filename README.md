@@ -93,10 +93,10 @@ Future enhancement scope:
 -
 
    -  Game GUI enhancement for more readability and good user experience.
-   -  Enhancement for adding Leaderboard for players who have wone the most.
+   -  Enhancement for using database other than in-memory DB to be production ready.
+   -  Enabling 4 player mancala feature and possible application scaling with docker containerization.
    -  Ability to choose the existing players to start new Game.
-   -  Introduce feature to play against computer (System as second player).
-   -  Enhancement for playing 4 player mancala.
+   -  Introduce feature to play against computer (System as second player).   
 
 
    
