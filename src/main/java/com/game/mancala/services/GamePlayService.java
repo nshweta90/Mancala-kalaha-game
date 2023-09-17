@@ -54,16 +54,6 @@ public class GamePlayService implements GameInterface {
 	GameConfiguration config; 
 	
 	
-	public static final String GAME_NOT_CONFIGURED_TO_BE_PLAYED_WITH_S_PLAYERS = "Game not configured to be played with %s players";
-
-	public static final String GAME_WITH_ID_S_COULD_NOT_BE_FOUND = "Game With Id %s could not be found!";
-
-	public static final String INVALID_MOVE_MESSAGE = "This move is invalid for game %s and player %s";
-
-	public static final String NO_MOVES_POSSIBLE_ON_COMPLETED_GAME = "No moves possible on completed game!";
-	
- 
-	 
 	/**
 	 * Validate and Start New Game for given players
 	 * @param playerList
@@ -71,7 +61,7 @@ public class GamePlayService implements GameInterface {
 	 */
 	public Game startGame(List<Player> playerDetails) throws GameInitializationException {		
 		if( config.getNumberOfPlayers().intValue() != playerDetails.size())
-			throw new GameInitializationException(String.format(GAME_NOT_CONFIGURED_TO_BE_PLAYED_WITH_S_PLAYERS, playerDetails.size()));
+			throw new GameInitializationException(String.format(Constants.MSG_INCORRECT_GAME_PLAYER_CONFIGURATION, playerDetails.size()));
 			
 		List<PlayerDataEntity> playerList = initGamePlayers(playerDetails);
 		GameDataEntity gameEntity = gameRepo.save(initNewGame()); 			
@@ -222,18 +212,18 @@ public class GamePlayService implements GameInterface {
 	 public GameDataEntity loadGameData(Integer gameId)
 	 {
 			return gameRepo.findById(gameId)
-					.orElseThrow(() -> new GameNotFoundException(String.format(GAME_WITH_ID_S_COULD_NOT_BE_FOUND, gameId)));
+					.orElseThrow(() -> new GameNotFoundException(String.format(Constants.MSG_GAME_COULD_NOT_BE_FOUND, gameId)));
      }
 
 	public void validateMove(Move move, GameDataEntity loadedGame) throws IllegalMoveException {
 		if (move.getPlayerID() != loadedGame.getActivePlayerID())
-			throw new IllegalMoveException(String.format(INVALID_MOVE_MESSAGE , loadedGame.getId(),move.getPlayerID())); 
+			throw new IllegalMoveException(String.format(Constants.MSG_INVALID_MOVE , loadedGame.getId(),move.getPlayerID())); 
 	}
 
 	@Override
 	public void validateGameState(GameDataEntity loadedGame) throws IllegalMoveException {
 		if(loadedGame.getGameState().equals(GameState.COMPLETE))
-			throw new IllegalMoveException(NO_MOVES_POSSIBLE_ON_COMPLETED_GAME);
+			throw new IllegalMoveException(Constants.MSG_NO_MOVES_POSSIBLE_ON_COMPLETED_GAME);
 	}
     
 	@Override
