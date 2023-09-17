@@ -26,6 +26,7 @@ import com.game.mancala.model.Game;
 import com.game.mancala.model.GameState;
 import com.game.mancala.model.Player;
 import com.game.mancala.repository.GameRepository;
+import com.game.mancala.util.Constants;
 import com.game.mancala.util.UtilTest;
 
  
@@ -59,7 +60,7 @@ class GameControllerTests {
 	ObjectMapper mapper; 
 	
 	@Autowired
-	private GameRepository gameRepo; 
+	GameRepository gameRepo; 
 	
 	@Autowired
 	GameConfiguration config;
@@ -110,13 +111,13 @@ class GameControllerTests {
 	@Test
 	void test_Exception_when_playGameMove_with_incorrectMove() throws Exception {		 
 		Game game = createNewGame(); 		
-		String expectedMessage =String.format("This move is invalid for game %s and player %s",game.getId(),100);
+		String expectedMessage =String.format(Constants.MSG_INVALID_MOVE,game.getId(),100);
 		
 	     mockMvc.perform(
 				MockMvcRequestBuilders.post("/playGameMove/"+game.getId()).contentType(MediaType.APPLICATION_JSON).content(PLAY_MOVE_WITH_INCORRECT_PLAYER_REQUEST))
 				.andExpect(MockMvcResultMatchers.status().isBadRequest())
 				.andExpect(result -> Assertions.assertTrue(result.getResolvedException() instanceof IllegalMoveException) )
-				.andExpect(result ->Assertions.assertEquals(result.getResolvedException().getMessage(),expectedMessage));		  
+				.andExpect(result ->Assertions.assertEquals(expectedMessage,result.getResolvedException().getMessage()));		  
 	}
 	@Test
 	void test_Exception_when_playGameMove_with_incorrectStateGame() throws Exception {		
@@ -134,7 +135,7 @@ class GameControllerTests {
 				MockMvcRequestBuilders.post("/playGameMove/"+game.getId()).contentType(MediaType.APPLICATION_JSON).content(request))
 				.andExpect(MockMvcResultMatchers.status().isBadRequest())
 				.andExpect(result -> Assertions.assertTrue(result.getResolvedException() instanceof IllegalMoveException) )
-				.andExpect(result ->Assertions.assertEquals("No moves possible on completed game!",result.getResolvedException().getMessage()));		  
+				.andExpect(result ->Assertions.assertEquals(Constants.MSG_NO_MOVES_POSSIBLE_ON_COMPLETED_GAME,result.getResolvedException().getMessage()));		  
 	}
 	
 	
