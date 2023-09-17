@@ -6,6 +6,36 @@ The backend uses spring boot framework to expose the REST APIs for the game.
 More details of the API can be explored with [Swagger](http://localhost:8080/swagger-ui/index.html) Url of application. 
 
 
+Installation and Running the game:
+-
+
+Instructions for running in Eclipse IDE:
+
+	Download the zip then unzip or clone the Git repository.	 
+	Open Command Prompt and Change directory to folder containing pom.xml.
+	Open Eclipse
+		File -> Import -> Existing Maven Project -> Navigate to the folder where you unzipped the zip.
+	Select the project and import. 
+	Choose the Spring Boot Application file  (search for @SpringBootApplication) in project explorer.
+	Right Click on the file and Run as Java Application.
+
+Instructions for running from command line:
+
+	Ensure Java 17 installed on system and JAVA_HOME correctly set.
+	Ensure maven is installed on system.
+	clone or download and extract the project Zip on local system.
+	
+	Build application- 
+            Go to project directory where pom.xml located.
+            build the project  ->mvn clean install
+    Run Application-
+            start spring boot app  -> mvnw spring:boot run
+              or
+            create jar - mvnw clean package  
+            Run jar -   java -jar target\<app-generated-jar>.jar
+
+
+
 Game Instructions:
 -
    -load the game from  http://localhost:8080/  or the hosted url http://\<host\>:\<port\> \
